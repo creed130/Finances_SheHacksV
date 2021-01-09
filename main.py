@@ -7,7 +7,6 @@ class Game(tk.Frame):
         self.pack()
         self.create_widgets()
 
-
     def create_widgets(self):
         self.button = tk.Button(self,
             text="Click here to begin!",
@@ -18,12 +17,10 @@ class Game(tk.Frame):
             command=self.sayHi
         )
 
-
         self.entry = tk.Entry()
 
         self.bquit = tk.Button(self, text="QUIT", fg="red",
                               command=self.master.destroy)
-
 
         self.hiLabel = tk.Label(
             text="Hello Tkinter",
@@ -47,9 +44,3 @@ class Game(tk.Frame):
 root = tk.Tk()
 app = Game(master=root)
 app.mainloop()
-
-#if __name__ == '__main__':
-#
-#    self.window = tk.Tk(None, None, 'adulting', 1)
-#    self.greeting = tk.Label(text="Hello!")
-#    self.greeting.pack()
