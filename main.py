@@ -18,7 +18,6 @@ class Game(tk.Frame):
             command=self.sayHi
         )
 
-
         self.entry = tk.Entry()
 
         self.bquit = tk.Button(self, text="QUIT", fg="red",
@@ -44,11 +43,10 @@ class Game(tk.Frame):
         print("Hello", name)
         self.entry.delete(0, tk.END)  # empty the text box
 
-root = tk.Tk()
-app = Game(master=root)
-app.mainloop()
-
-#if __name__ == '__main__':
+if __name__ == '__main__':
+    root = tk.Tk()
+    app = Game(master=root)
+    app.mainloop()
 #
 #    self.window = tk.Tk(None, None, 'adulting', 1)
 #    self.greeting = tk.Label(text="Hello!")
