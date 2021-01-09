@@ -14,12 +14,9 @@ class gameMenu(tk.Frame):
             fg="black",
         )
 
-        def window():
-            Toplevel()
-
         self.button = tk.Button(
             text="Click here to begin!",
-            command=window,
+            command=self.window,
             width=25,
             height=3,
             bg="white",
@@ -32,3 +29,6 @@ class gameMenu(tk.Frame):
         self.label.pack()
         self.button.pack()
         self.bquit.pack()
+
+    def window(self):
+        Toplevel()
