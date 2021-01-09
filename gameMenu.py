@@ -1,7 +1,6 @@
 import tkinter as tk
 import gamePlay
 
-
 class gameMenu(tk.Frame):
     def __init__(self, master=None):
         super().__init__(master)
@@ -13,12 +12,12 @@ class gameMenu(tk.Frame):
         self.label = tk.Label(
             text="\n\n\nCongratulations, you're an adult.\n\nTime to move out!\n",
             fg="black",
-            font=("Arial", 16)
+            font=16
         )
 
         self.button = tk.Button(
             text="Click here to begin your life!",
-            command=gamePlay.window,
+            command=gamePlay.window1,
             width=25,
             height=3,
             bg="white",
