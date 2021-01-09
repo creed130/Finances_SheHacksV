@@ -15,15 +15,9 @@ class gameMenu(tk.Frame):
             fg="black",
         )
 
-        def window():
-            newWindow = Toplevel()
-            newWindow.title("Main Menu")
-            newWindow.geometry("1200x800")
-            Label(newWindow, text="welcome to the new screen").pack()
-
         self.button = tk.Button(
             text="Click here to begin!",
-            command=window,
+            command=self.window,
             width=25,
             height=3,
             bg="white",
@@ -35,3 +29,6 @@ class gameMenu(tk.Frame):
         self.label.pack()
         self.button.pack()
         self.bquit.pack()
+
+    def window(self):
+        Toplevel()
