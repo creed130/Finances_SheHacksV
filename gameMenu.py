@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import *
 
+
 class gameMenu(tk.Frame):
     def __init__(self, master=None):
         super().__init__(master)
@@ -23,8 +24,7 @@ class gameMenu(tk.Frame):
             fg="red"
         )
 
-        self.bquit = tk.Button(text="QUIT", fg="red", bg="white",
-                              command=self.master.destroy)
+        self.bquit = tk.Button(text="QUIT", fg="red", bg="white", command=self.master.destroy)
 
         self.label.pack()
         self.button.pack()
