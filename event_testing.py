@@ -1,3 +1,4 @@
+
 # This will import all the widgets 
 # and modules which are available in 
 # tkinter and ttk module 
@@ -14,6 +15,8 @@ master.title("Home")
 
 # function to open a new window 
 # on a button click 
+
+
 def openNewWindow():
     # Toplevel object which will
     # be treated as a new window
@@ -44,4 +47,4 @@ btn = Button(master,
 btn.pack(pady=10)
 
 # mainloop, runs infinitely 
-mainloop() 
+mainloop()
