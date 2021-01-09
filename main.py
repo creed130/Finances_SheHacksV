@@ -50,10 +50,6 @@ app.mainloop()
 
 #if __name__ == '__main__':
 #
-#    window = tk.Tk(None, None, 'adulting', 1)
-#    greeting = tk.Label(text="Hello!")
-#    greeting.pack()
-#
-#
-#
-#    window.mainloop()
+#    self.window = tk.Tk(None, None, 'adulting', 1)
+#    self.greeting = tk.Label(text="Hello!")
+#    self.greeting.pack()
