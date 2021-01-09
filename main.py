@@ -1,11 +1,9 @@
 import tkinter as tk
 
-
 if __name__ == '__main__':
 
-    #prints "Hello name!" to the Tkinter window
     window = tk.Tk(None, None, 'adulting', 1)
-    greeting = tk.Label(text="Hello " + entry + "!")
+    greeting = tk.Label(text="Hello!")
     greeting.pack()
 
     button = tk.Button(
