@@ -10,7 +10,7 @@ class gameMenu(tk.Frame):
 
     def create_widgets(self):
         self.label = tk.Label(
-            text="\n\n\nCongratulations, you're an adult.\n\nTime to move out!\n",
+            text="\n\n\nCongratulations, you're an adult.\n\nYour parents have given you $10 000 in savings. Time to move out!\n",
             fg="black",
             font=16
         )

@@ -27,8 +27,17 @@ def window1():
     nice.pack()
     cheap.pack()
 
+#nice apt
 def window2():
     newWindow2 = Toplevel()
+    Label(newWindow2,
+          text="Welcome to your new apartment!\n\nYour monthly rent is $900",
+          fg="black"
+        ).pack()
 
+#cheap apt
 def window3():
     newWindow3 = Toplevel()
+    Label(newWindow3,
+          text="Welcome to your new apartment!\n\nYour monthly rent is $700",
+          fg="black").pack()
