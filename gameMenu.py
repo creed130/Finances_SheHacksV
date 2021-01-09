@@ -1,5 +1,6 @@
 import tkinter as tk
-from tkinter import *
+import gamePlay
+
 
 class gameMenu(tk.Frame):
     def __init__(self, master=None):
@@ -15,18 +16,19 @@ class gameMenu(tk.Frame):
             font=("Arial", 16)
         )
 
-        def window():
-            Toplevel()
-
         self.button = tk.Button(
             text="Click here to begin your life!",
-            command=window,
-            fg="red",
-            padx=10
+            command=gamePlay.window,
+            width=25,
+            height=3,
+            bg="white",
+            fg="red"
         )
 
-        self.bquit = tk.Button(text="QUIT", fg="red", bg="white",
-                              command=self.master.destroy)
+        self.bquit = tk.Button(text="QUIT",
+                               fg="red",
+                               bg="white",
+                               command=self.master.destroy)
 
         self.label.pack()
         self.button.pack()
