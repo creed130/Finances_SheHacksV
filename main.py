@@ -1,5 +1,7 @@
 import tkinter as tk
+from gameMenu import gameMenu
 
+<<<<<<< HEAD
 class Game(tk.Frame):
     def __init__(self, master=None):
         super().__init__(master)
@@ -53,6 +55,12 @@ app = Game(master=root)
 app.mainloop()
 
 #if __name__ == '__main__':
+=======
+if __name__ == '__main__':
+    root = tk.Tk()
+    app = gameMenu(master=root)
+    app.mainloop()
+>>>>>>> upstream/main
 #
 #    self.window = tk.Tk(None, None, 'adulting', 1)
 #    self.greeting = tk.Label(text="Hello!")
