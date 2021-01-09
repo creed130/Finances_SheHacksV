@@ -1,12 +1,12 @@
 import tkinter as tk
-from gameMenu import gameMenu
 
-class Game(tk.Frame):
+class gameMenu(tk.Frame):
     def __init__(self, master=None):
         super().__init__(master)
         self.master = master
         self.pack()
         self.create_widgets()
+
 
     def create_widgets(self):
         self.button = tk.Button(self,
@@ -18,10 +18,12 @@ class Game(tk.Frame):
             command=self.sayHi
         )
 
+
         self.entry = tk.Entry()
 
         self.bquit = tk.Button(self, text="QUIT", fg="red",
                               command=self.master.destroy)
+
 
         self.hiLabel = tk.Label(
             text="Hello Tkinter",
@@ -42,11 +44,3 @@ class Game(tk.Frame):
         print("Hello", name)
         self.entry.delete(0, tk.END)  # empty the text box
 
-root = tk.Tk()
-app = Game(master=root)
-app.mainloop()
-
-if __name__ == '__main__':
-    root = tk.Tk()
-    app = gameMenu(master=root)
-    app.mainloop()
