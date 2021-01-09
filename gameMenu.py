@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter import *
 
 class gameMenu(tk.Frame):
     def __init__(self, master=None):
@@ -7,40 +8,27 @@ class gameMenu(tk.Frame):
         self.pack()
         self.create_widgets()
 
-
     def create_widgets(self):
-        self.button = tk.Button(self,
-            text="Click here to begin!",
-            width=25,
-            height=5,
-            bg="white",
-            fg="red",
-            command=self.sayHi
+        self.label = tk.Label(
+            text="Congratulations, you're an adult.\nTime to move out!\n",
+            fg="black",
         )
 
+        def window():
+            Toplevel()
 
-        self.entry = tk.Entry()
+        self.button = tk.Button(
+            text="Click here to begin!",
+            command=window,
+            width=25,
+            height=3,
+            bg="white",
+            fg="red"
+        )
 
-        self.bquit = tk.Button(self, text="QUIT", fg="red",
+        self.bquit = tk.Button(text="QUIT", fg="red", bg="white",
                               command=self.master.destroy)
 
-
-        self.hiLabel = tk.Label(
-            text="Hello Tkinter",
-            fg="white",
-            bg="black",
-            width=10,
-            height=4
-        )
-
-        self.button.pack(side="top")
-        self.entry.pack(side="bottom")
-        self.hiLabel.pack(side="bottom")
-        self.bquit.pack(side="bottom")
-
-    def sayHi(self):
-        # print out hello and their name
-        name = self.entry.get()
-        print("Hello", name)
-        self.entry.delete(0, tk.END)  # empty the text box
-
+        self.label.pack()
+        self.button.pack()
+        self.bquit.pack()
