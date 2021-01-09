@@ -9,21 +9,29 @@ class Game(tk.Frame):
 
 
     def create_widgets(self):
+        self.titleText = tk.Label(
+            text="Welcome to Common Cents! Let's walk through a year of living on your own.",
+            bg="white",
+            fg="black",
+            width=70,
+            height=3
+        )
+        self.titleText.pack()
+
         self.button = tk.Button(self,
             text="Click here to begin!",
             width=25,
             height=5,
             bg="white",
-            fg="red",
+            fg="red"
             #command=self.sayHi
         )
-
-
+        self.button.pack()
         #self.entry = tk.Entry()
 
         self.bquit = tk.Button(self, text="QUIT", fg="red",
                               command=self.master.destroy)
-
+        self.bquit.pack()
 
         #self.hiLabel = tk.Label(
             #text="Hello Tkinter",
@@ -32,13 +40,9 @@ class Game(tk.Frame):
             #width=10,
             #height=4
         #)
-
-        self.button.pack(side="top")
         #self.entry.pack(side="bottom")
         #self.hiLabel.pack(side="bottom")
-        self.bquit.pack(side="bottom")
-
-    #def sayHi(self):
+        #def sayHi(self):
         # print out hello and their name
         #name = self.entry.get()
         #print("Hello", name)
