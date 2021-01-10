@@ -3,6 +3,9 @@ from gameMenu import gameMenu
 
 HOUSE = 'cheap'
 
+SAVINGS = 10000
+
+
 if __name__ == '__main__':
     root = tk.Tk()
     root.title('Common Cents')
