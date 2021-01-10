@@ -1,6 +1,7 @@
 import tkinter as tk
 from gameMenu import gameMenu
 
+HOUSE = 'cheap'
 
 SAVINGS = 10000
 
@@ -10,5 +11,5 @@ if __name__ == '__main__':
     root.title('Common Cents')
     root.geometry('600x500')
 
-    app = gameMenu(master=root)
+    app = gameMenu(HOUSE, master=root)
     app.mainloop()
