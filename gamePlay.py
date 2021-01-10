@@ -28,7 +28,11 @@ def window1():
     cheap.pack()
 
 def window2():
+    HOUSE='nice'
     newWindow2 = Toplevel()
+    newWindow2.geometry('400x200')
 
 def window3():
+    HOUSE='cheap'
     newWindow3 = Toplevel()
+    newWindow3.geometry('400x200')
