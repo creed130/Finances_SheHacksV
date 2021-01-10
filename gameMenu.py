@@ -10,7 +10,13 @@ class gameMenu(tk.Frame):
 
     def create_widgets(self):
         self.label = tk.Label(
-            text="\n\n\nCongratulations, you're an adult.\n\nTime to move out!\n",
+            text="\n\n\nCongratulations, you're an adult.\n\nTime to move out!\n\n"
+            "You just got your first credit card,\nand now you need to build your credit score.\n"
+            "\n\nA credit score is a number the bank keeps track of\nto represent how trustworthy you are to receive a loan.\n"
+            "It will rise slowly as you pay your credit card bills on time,\n"
+            "But watch out! One mistake can drop it drastically.\n\n"
+            "\nThroughout the game, you will make financial decisions\nwhich will help or detriment your financial situation.\n"
+            "Good luck!\n\n",
             fg="black",
             font=16
         )
