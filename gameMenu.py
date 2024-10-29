@@ -1,10 +1,12 @@
+"""
+Authors: Charlotte Reed, Jen Kovinich, Al Wong
+c2021 for the SheHacks V Hackathon
+"""
+
+
 import tkinter as tk
 import gamePlay
 
-
-# class gameMenu(tk.Frame):
-#     def __init__(self, HOUSE='cheap', master=None):
-#         self=self
 
 class gameMenu(tk.Frame):
     def __init__(self, HOUSE='cheap', master=None):
