@@ -2,13 +2,12 @@ import tkinter as tk
 import gamePlay
 
 
+# class gameMenu(tk.Frame):
+#     def __init__(self, HOUSE='cheap', master=None):
+#         self=self
+
 class gameMenu(tk.Frame):
     def __init__(self, HOUSE='cheap', master=None):
-
-
-class GameMenu(tk.Frame):
-    def __init__(self, master=None):
-
         super().__init__(master)
         self.master = master
         self.pack()
