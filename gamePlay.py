@@ -1,6 +1,26 @@
+"""
+Authors: Charlotte Reed, Jen Kovinich, Al Wong
+c2021 for the SheHacks V Hackathon
+"""
+
 from tkinter import *
 
 def window1():
+    '''
+    Prints the person's name and age.
+
+    If the argument 'additional' is passed, then it is appended after the main info.
+
+    Parameters
+    ----------
+    additional : str, optional
+        More info to be displayed (default is None)
+
+    Returns
+    -------
+    None
+    '''
+
     newWindow1 = Toplevel()
 
     newWindow1.geometry('600x400')
@@ -29,6 +49,21 @@ def window1():
 
 #nice apt
 def window2():
+    '''
+    Prints the person's name and age.
+
+    If the argument 'additional' is passed, then it is appended after the main info.
+
+    Parameters
+    ----------
+    additional : str, optional
+        More info to be displayed (default is None)
+
+    Returns
+    -------
+    None
+    '''
+
     HOUSE='nice'
     newWindow2 = Toplevel()
     newWindow2.geometry('400x200')
@@ -39,6 +74,21 @@ def window2():
 
 #cheap apt
 def window3():
+    '''
+    Prints the person's name and age.
+
+    If the argument 'additional' is passed, then it is appended after the main info.
+
+    Parameters
+    ----------
+    additional : str, optional
+        More info to be displayed (default is None)
+
+    Returns
+    -------
+    None
+    '''
+
     HOUSE='cheap'
     newWindow3 = Toplevel()
     newWindow3.geometry('400x200')

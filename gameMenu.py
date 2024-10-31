@@ -3,19 +3,63 @@ Authors: Charlotte Reed, Jen Kovinich, Al Wong
 c2021 for the SheHacks V Hackathon
 """
 
-
 import tkinter as tk
 import gamePlay
 
-
 class gameMenu(tk.Frame):
+    '''
+    A class to represent a person.
+
+    ...
+
+    Attributes
+    ----------
+    name : str
+        first name of the person
+    surname : str
+        family name of the person
+    age : int
+        age of the person
+
+    Methods
+    -------
+    info(additional=""):
+        Prints the person's name and age.
+    '''
+
     def __init__(self, HOUSE='cheap', master=None):
+        '''
+        Constructs all the necessary attributes for the person object.
+
+        Parameters
+        ----------
+            name : str
+                first name of the person
+            surname : str
+                family name of the person
+            age : int
+                age of the person
+        '''
         super().__init__(master)
         self.master = master
         self.pack()
         self.create_widgets()
 
     def create_widgets(self):
+        '''
+        Prints the person's name and age.
+
+        If the argument 'additional' is passed, then it is appended after the main info.
+
+        Parameters
+        ----------
+        additional : str, optional
+            More info to be displayed (default is None)
+
+        Returns
+        -------
+        None
+        '''
         self.label = tk.Label(
             text="\n\n\nCongratulations, you're an adult.\n\nTime to move out!\n\n"
             "You just got your first credit card,\nand now you need to build your credit score.\n"
