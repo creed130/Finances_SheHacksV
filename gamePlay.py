@@ -1,6 +1,19 @@
+"""
+Authors: Charlotte Reed, Jen Kovinich, Al Wong
+c2021 for the SheHacks V Hackathon
+"""
+
 from tkinter import *
 
 def window1():
+    '''
+    Window where the user chooses their apartment.
+
+    Returns
+    -------
+    None
+    '''
+
     newWindow1 = Toplevel()
 
     newWindow1.geometry('600x400')
@@ -29,6 +42,14 @@ def window1():
 
 #nice apt
 def window2():
+    '''
+    Window to welcome the user to their nice apartment.
+
+    Returns
+    -------
+    None
+    '''
+
     HOUSE='nice'
     newWindow2 = Toplevel()
     newWindow2.geometry('400x200')
@@ -39,6 +60,14 @@ def window2():
 
 #cheap apt
 def window3():
+    '''
+    Window to welcome the user to their cheap apartment.
+
+    Returns
+    -------
+    None
+    '''
+
     HOUSE='cheap'
     newWindow3 = Toplevel()
     newWindow3.geometry('400x200')

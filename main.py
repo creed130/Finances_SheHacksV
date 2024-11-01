@@ -1,33 +1,49 @@
+"""
+Authors: Charlotte Reed, Jen Kovinich, Al Wong
+c2021 for the SheHacks V Hackathon
+"""
+
 import tkinter as tk
 
 from gameMenu import gameMenu
 
 HOUSE = 'cheap'
 
-#from gameMenu import gameMenu
-
-
 SAVINGS = 10000
 
-
 if __name__ == '__main__':
+    '''
+    Main loop to open the window.
+    '''
     root = tk.Tk()
     root.title('Common Cents')
     root.geometry('600x500')
-
 
     app = gameMenu(HOUSE, master=root)
     app.mainloop()
 
 
-    #app = gameMenu(master=root)
-    #app.mainloop()
-
-
-#global apartment # if 0, apartment is cheap. if 1, apartment is expensive
-
 class CommonCents(tk.Tk):
+    '''
+    A class to represent the whole game.
+    Inherits the tkinter.Tk class.
+    
+    Attributes
+    ----------
+    frames : tkinter.Tk
+        frames the user will open.
+
+    Methods
+    -------
+    show_frame(self, cont):
+        Shows a frame.
+    '''
+
     def __init__(self, *args, **kwargs):
+        '''
+        Initializes the tkinter class Common Cents.
+        Inherits parameters.
+        '''
         container = tk.Frame(self)
 
         container.pack(side="top", fill="both", expand=True)
@@ -47,14 +63,31 @@ class CommonCents(tk.Tk):
         self.show_frame(MainMenu)
 
     def show_frame(self, cont):
+        '''
+        Show the frame.
+
+        Parameters
+        ----------
+        cont : Any
+
+        Returns
+        -------
+        None
+        '''
 
         frame = self.frames[cont]
         frame.tkraise()
 
 
 class MainMenu(tk.Frame):
+    '''
+    The Main Menu, which is the first frame that a user sees when they start the app.
+    '''
 
     def __init__(self, parent, controller):
+        '''
+        Constructs all the necessary attributes for the person object.
+        '''
         tk.Frame.__init__(self, parent)
 
         label1 = tk.Label(self, text="Congratulations, you just turned 18! " +
@@ -73,27 +106,32 @@ class MainMenu(tk.Frame):
                                 command=lambda: controller.show_frame(GetStarted))
         buttonCheap.pack()
 
-        # global apartment
-        # if buttonCheap:
-            # apartment = 0
-        # elif buttonExp:
-            # apartment = 1
-
 
 class GetStarted(tk.Frame):
+    '''
+    Start the application.
+
+    ...
+
+    Attributes
+    ----------
+    parent : Any
+    controller : Any
+
+    '''
 
     def __init__(self, parent, controller):
-        tk.Frame.__init__(self,parent)
+        '''
+        Constructs all the necessary attributes for the GetStarted object.
+        '''
 
-    # global apartment
-    # print(apartment)
+        tk.Frame.__init__(self,parent)
 
         label = tk.Label(self, text="Your rent is $").pack()
 
         button = tk.Button(self, text="Main Menu?",
                            command=lambda: controller.show_frame(MainMenu))
         button.pack()
-
 
 app = CommonCents()
 app.mainloop()
