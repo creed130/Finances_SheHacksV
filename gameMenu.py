@@ -8,37 +8,32 @@ import gamePlay
 
 class gameMenu(tk.Frame):
     '''
-    A class to represent a person.
+    A class to represent the physical game menu.
+    Inherits from the tkinter Frame class.
 
     ...
 
     Attributes
     ----------
-    name : str
-        first name of the person
-    surname : str
-        family name of the person
-    age : int
-        age of the person
+    master : tk.root
+        The root menu widget.
 
     Methods
     -------
-    info(additional=""):
-        Prints the person's name and age.
+    create_widgets(self):
+        Initializes the widgets on the root menu.
     '''
 
     def __init__(self, HOUSE='cheap', master=None):
         '''
-        Constructs all the necessary attributes for the person object.
+        Constructs all the necessary attributes for the gameMenu.
 
         Parameters
         ----------
-            name : str
-                first name of the person
-            surname : str
-                family name of the person
-            age : int
-                age of the person
+            HOUSE : str
+                type of house the person starts with.
+            master : tk.root
+                the root menu widget.
         '''
         super().__init__(master)
         self.master = master
@@ -47,14 +42,7 @@ class gameMenu(tk.Frame):
 
     def create_widgets(self):
         '''
-        Prints the person's name and age.
-
-        If the argument 'additional' is passed, then it is appended after the main info.
-
-        Parameters
-        ----------
-        additional : str, optional
-            More info to be displayed (default is None)
+        Creates the widgets for the root menu.
 
         Returns
         -------

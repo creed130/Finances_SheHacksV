@@ -13,7 +13,7 @@ SAVINGS = 10000
 
 if __name__ == '__main__':
     '''
-    Main loop to open the app
+    Main loop to open the window.
     '''
     root = tk.Tk()
     root.title('Common Cents')
@@ -25,23 +25,18 @@ if __name__ == '__main__':
 
 class CommonCents(tk.Tk):
     '''
-    A class to represent a person.
-
-    ...
-
+    A class to represent the whole game.
+    Inherits the tkinter.Tk class.
+    
     Attributes
     ----------
-    name : str
-        first name of the person
-    surname : str
-        family name of the person
-    age : int
-        age of the person
+    frames : tkinter.Tk
+        frames the user will open.
 
     Methods
     -------
-    info(additional=""):
-        Prints the person's name and age.
+    show_frame(self, cont):
+        Shows a frame.
     '''
 
     def __init__(self, *args, **kwargs):
@@ -69,14 +64,11 @@ class CommonCents(tk.Tk):
 
     def show_frame(self, cont):
         '''
-        Prints the person's name and age.
-
-        If the argument 'additional' is passed, then it is appended after the main info.
+        Show the frame.
 
         Parameters
         ----------
-        additional : str, optional
-            More info to be displayed (default is None)
+        cont : Any
 
         Returns
         -------
@@ -95,15 +87,6 @@ class MainMenu(tk.Frame):
     def __init__(self, parent, controller):
         '''
         Constructs all the necessary attributes for the person object.
-
-        Parameters
-        ----------
-            name : str
-                first name of the person
-            surname : str
-                family name of the person
-            age : int
-                age of the person
         '''
         tk.Frame.__init__(self, parent)
 
@@ -126,37 +109,20 @@ class MainMenu(tk.Frame):
 
 class GetStarted(tk.Frame):
     '''
-    A class to represent a person.
+    Start the application.
 
     ...
 
     Attributes
     ----------
-    name : str
-        first name of the person
-    surname : str
-        family name of the person
-    age : int
-        age of the person
+    parent : Any
+    controller : Any
 
-    Methods
-    -------
-    info(additional=""):
-        Prints the person's name and age.
     '''
 
     def __init__(self, parent, controller):
         '''
-        Constructs all the necessary attributes for the person object.
-
-        Parameters
-        ----------
-            name : str
-                first name of the person
-            surname : str
-                family name of the person
-            age : int
-                age of the person
+        Constructs all the necessary attributes for the GetStarted object.
         '''
 
         tk.Frame.__init__(self,parent)

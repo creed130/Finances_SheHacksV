@@ -7,14 +7,7 @@ from tkinter import *
 
 def window1():
     '''
-    Prints the person's name and age.
-
-    If the argument 'additional' is passed, then it is appended after the main info.
-
-    Parameters
-    ----------
-    additional : str, optional
-        More info to be displayed (default is None)
+    Window where the user chooses their apartment.
 
     Returns
     -------
@@ -50,14 +43,7 @@ def window1():
 #nice apt
 def window2():
     '''
-    Prints the person's name and age.
-
-    If the argument 'additional' is passed, then it is appended after the main info.
-
-    Parameters
-    ----------
-    additional : str, optional
-        More info to be displayed (default is None)
+    Window to welcome the user to their nice apartment.
 
     Returns
     -------
@@ -75,14 +61,7 @@ def window2():
 #cheap apt
 def window3():
     '''
-    Prints the person's name and age.
-
-    If the argument 'additional' is passed, then it is appended after the main info.
-
-    Parameters
-    ----------
-    additional : str, optional
-        More info to be displayed (default is None)
+    Window to welcome the user to their cheap apartment.
 
     Returns
     -------
